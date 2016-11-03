@@ -1,18 +1,18 @@
 package aGameOfGold;
 
-public class player {
+public class Player {
 
 	private int current, win = 0;
 	private String name;
 
 	private Account points;
 
-	public player(String a) {
+	public Player(String a) {
 		name = a;
 		points = new Account();
 	}
 
-	// Sets win to 1 if the player has reached the victory condition of 3000 points
+	// Sets win to 1 if the Player has reached the victory condition of 3000 points
 	public void checkWin() {
 		if (points.getGoldcoins() >= 3000){
 			win = 1;
