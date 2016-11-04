@@ -33,12 +33,16 @@ public class PlayerTest {
 	}
 
 	/** jUnit5
-	 * 	Tests if the player gets 650 gold when landing on field 12
+	 * 	Tests if the player gets the right amount of gold when landing on a new field
 	 */
 	@Test
 	public void testAddPoints() {
-		int expected = 1650;
-		player1.setCurrent(12);
+		Dice d1 = new Dice(6);
+		Dice d2 = new Dice(6);
+		d1.roll();
+		d2.roll();
+		player1.setCurrent(d1.getValue() + d2.getValue());
+		int expected = 1000 + FieldDescriptions.fieldGold[12 - player1.getCurrent()] ;
 		player1.addPoints(FieldDescriptions.fieldGold[12 - player1.getCurrent()]);
 		int actual = player1.getPoints();
 		assertEquals(expected, actual);
