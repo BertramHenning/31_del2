@@ -9,11 +9,11 @@ import desktop_resources.GUI;
 public class AGameOfGold {
 
 	public static void main(String[] args) {
-		player[] players = new player[2];
+		Player[] players = new Player[2];
 
 		// Creates two Player objects in an array
-		players[0] = new player("Player 1");
-		players[1] = new player("Player 2");
+		players[0] = new Player("Player 1");
+		players[1] = new Player("Player 2");
 
 		// Scanner to read input
 		Scanner sc = new Scanner(System.in);
