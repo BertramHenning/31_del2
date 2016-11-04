@@ -20,7 +20,7 @@ public class PlayerTest {
 		player1 = null;
 	}
 
-	/** T4
+	/** jUnit4
 	 *  Tests if win is set to 1 when the player has 3000 or more points
 	 */
 	@Test
@@ -32,7 +32,7 @@ public class PlayerTest {
 		assertEquals(expected, actual);
 	}
 
-	/** T5
+	/** jUnit5
 	 * 	Tests if the player gets 650 gold when landing on field 12
 	 */
 	@Test

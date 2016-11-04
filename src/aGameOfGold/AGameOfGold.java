@@ -75,7 +75,8 @@ public class AGameOfGold {
 		sc.close();
 
 	}
-
+	
+	// Creates 11 fields from the specifications in FieldDescriptions
 	private static void GUIInitialize() {
 		Field[] fields = new Field[11];
 

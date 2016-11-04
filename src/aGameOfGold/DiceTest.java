@@ -22,7 +22,7 @@ public class DiceTest {
 		d1 = null;
 	}
 
-	/** T2
+	/** jUnit2
 	 * Tests if Dice has equal chances of rolling all numbers from 1-6 with 4% deviation
 	 */
 	@Test

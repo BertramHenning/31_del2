@@ -20,7 +20,7 @@ public class AccountTest {
 		points = null;
 	}
 
-	/**	T1
+	/**	jUnit1
 	 *  Tests if goldCoins can drop below 0
 	 */
 	@Test
@@ -34,7 +34,7 @@ public class AccountTest {
 		assertEquals(expected, actual);
 	}
 	
-	/**	T3
+	/**	jUnit3
 	 *  Tests if goldCoins start at 1000
 	 */
 	@Test
