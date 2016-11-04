@@ -33,5 +33,17 @@ public class AccountTest {
 		int actual = points.getGoldcoins();
 		assertEquals(expected, actual);
 	}
+	
+	/**	T3
+	 *  Tests if goldCoins start at 1000
+	 */
+	@Test
+	public void testGetGoldcoins() {
+		int expected = 1000;
+		int actual = points.getGoldcoins();
+		assertEquals(expected, actual);
+	}
+	
+	
 
 }
