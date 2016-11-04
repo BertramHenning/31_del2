@@ -20,7 +20,9 @@ public class AccountTest {
 		points = null;
 	}
 
-	// Tests if goldCoins can drop below 0
+	/**	T1
+	 *  Tests if goldCoins can drop below 0
+	 */
 	@Test
 	public void testAddgoldCoins() {
 		int expected = 0;
