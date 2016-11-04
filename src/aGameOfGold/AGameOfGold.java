@@ -25,6 +25,7 @@ public class AGameOfGold {
 
 		GUIInitialize();
 
+		// Adds both players to GUI
 		GUI.addPlayer(players[0].toString(), 1000);
 		GUI.addPlayer(players[1].toString(), 1000);
 
@@ -37,24 +38,30 @@ public class AGameOfGold {
 			// Rolls the dice
 			d1.roll();
 			d2.roll();
-
+			
+			// Saves the players current combined roll
 			players[whoseTurn].setCurrent(d1.getValue() + d2.getValue());
 			
-
+			// Adds the dice to GUI
 			GUI.setDice(d1.getValue(), d2.getValue());
-
+			
+			// Removes the current car and adds a new copy to the new field according to the roll
 			GUI.removeAllCars(players[whoseTurn].toString());
 			GUI.setCar(13 - players[whoseTurn].getCurrent(), players[whoseTurn].toString());
-
+			
+			// Adds gold according to the field the player landed on
 			players[whoseTurn].addPoints(FieldDescriptions.fieldGold[12 - players[whoseTurn].getCurrent()]);
-
+			
+			// Displays the players new amount of gold on the GUI
 			GUI.setBalance(players[whoseTurn].toString(), players[whoseTurn].getPoints());
 			
+			// Shows the player the description on the field they landed on
 			GUI.showMessage(FieldDescriptions.fieldDescriptions[12 - players[whoseTurn].getCurrent()] + "");
 
 			// Checks if the current player won
 			players[whoseTurn].checkWin();
-
+			
+			// If the player won the game, the GUI says congratulations and closes the game
 			if (players[whoseTurn].getWin() == 1) {
 				GUI.showMessage(players[whoseTurn] + " won the game!");
 				break;
